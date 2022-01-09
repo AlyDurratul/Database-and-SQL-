@@ -1,0 +1,94 @@
+
+--use of equal and not equal
+
+select * from Books_Data;
+
+SELECT BookName FROM books_data WHERE PublishingYear = 2011;
+
+SELECT BookName FROM books_data WHERE PublishingYear != 2011;
+
+
+
+--use of like and not like
+
+select BookName from Books_Data where BookName like 'B';
+
+select BookName from Books_Data where BookName NOT like 'B';
+
+
+
+---use of Greater than
+
+
+
+select BookName, PublishingYear from Books_Data order by PublishingYear;
+
+select BookName, PublishingYear from Books_Data where PublishingYear > 1000 order by PublishingYear;
+
+select BookName, PublishingYear from Books_Data where PublishingYear >=1000 order by PublishingYear;
+
+
+
+--use of less than
+
+select BookName, PublishingYear from Books_Data where PublishingYear<1000 order by PublishingYear;
+
+
+
+-- use of logical END
+
+select BookName,Author, PublishingYear from Books_Data where Author = 'Colleen Hoover' and PublishingYear = 2012;
+
+
+
+-- use of logical or
+
+select BookName,Author, PublishingYear from Books_Data where Author = 'Colleen Hoover' || PublishingYear = 2012;
+
+
+
+--use of BETWEEN
+
+SELECT BookName, PublishingYear from Books_Data WHERE PublishingYear BETWEEN 2004 and 2012;
+
+
+
+--use of IN and NOt IN
+
+SELECT BookName,Author from Books_Data where Author IN('Harper Lee','Charles Duhigg','Colleen Hoover');
+
+SELECT BookName,PublishingYear from Books_Data where PublishingYear IN(2000, 2017);
+
+
+
+--Case statements
+
+SELECT BookName, PublishingYear,
+
+       CASE 
+
+         WHEN PublishingYear &gt;= 2000 THEN 'Modern Lit'
+
+         ELSE '20th Century Lit'
+
+       END AS GENRE
+
+FROM Books_Data;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
